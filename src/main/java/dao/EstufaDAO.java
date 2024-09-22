@@ -8,6 +8,7 @@ import java.util.List;
 import util.HibernateUtil;
 
 public class EstufaDAO {
+    
 
     public void save(EstufaEntity estufa) {
         Session session = HibernateUtil.getSessionFactory().openSession();

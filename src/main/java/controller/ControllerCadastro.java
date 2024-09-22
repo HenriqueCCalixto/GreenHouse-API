@@ -8,6 +8,7 @@ import view.CadastroView;
 public class ControllerCadastro {
 
     private CadastroView cadastroView;
+    
     private EstufaDAO estufaDAO;
 
     public ControllerCadastro(CadastroView cadastroView, EstufaDAO estufaDAO) {
@@ -38,7 +39,7 @@ public class ControllerCadastro {
 
             estufaDAO.save(estufa);
             JOptionPane.showMessageDialog(null, "Estufa salva com sucesso!");
-            clearFields(); // Limpa os campos após salvar
+            clearFields(); 
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(cadastroView, "Por favor, insira valores válidos para as temperaturas e luminosidade.", "Erro", JOptionPane.ERROR_MESSAGE);
         } catch (Exception e) {

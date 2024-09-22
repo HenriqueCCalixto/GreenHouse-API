@@ -8,6 +8,7 @@ public class HibernateUtil {
     private static SessionFactory sessionFactory;
 
     static {
+        
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {

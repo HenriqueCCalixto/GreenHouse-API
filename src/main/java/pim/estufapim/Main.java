@@ -11,5 +11,6 @@ public class Main {
         EstufaDAO estufaDAO = new EstufaDAO();
         ControllerCadastro controllerCadastro = new ControllerCadastro(cadastroView, estufaDAO);
         cadastroView.setVisible(true); 
+        
     }
 }

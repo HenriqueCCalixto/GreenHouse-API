@@ -12,6 +12,7 @@
         <exec.mainClass>pim.estufapim.Main</exec.mainClass>
     </properties>
     
+    
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
