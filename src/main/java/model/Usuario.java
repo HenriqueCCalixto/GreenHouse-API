@@ -21,17 +21,6 @@ public class Usuario {
     @Column(name = "senha")
     private String senha;
 
-    public Usuario(String userName, String senha) {
-        this.userName = userName;
-        this.senha = senha;
-    }
-
-    public void cadastrar(String nome, String userName, String senha) {
-        this.userName= userName;
-        this.senha = senha;
-        this.nome = nome;
-    }
-
     public String getNome() {
         return nome;
     }

@@ -1,29 +1,41 @@
 package controller;
 
 import dao.UsuarioDAO;
+import javax.swing.JOptionPane;
 import model.Usuario;
 import view.CadastroUsuarioView;
 
 public class ControllerCadastroUsuario {
-    
+
     private CadastroUsuarioView view;
-    private Usuario usuario;
-    private UsuarioDAO dao;
-    
-    public ControllerCadastroUsuario() {
-        view = new CadastroUsuarioView(null, true);
-        dao = new UsuarioDAO();
+    private Usuario usuario = new Usuario();
+    private UsuarioDAO dao = new UsuarioDAO();
+
+    public ControllerCadastroUsuario(CadastroUsuarioView view) {
+        this.view = view;
+        addEvents();
+        this.view.setVisible(true);           
     }
     
+    private void addEvents(){
+    view.getBtnSalvar().addActionListener(e -> salvar());
+    }
+
     private void popularUsuario() {
         usuario.setNome(view.getTxtNome().getText());
         usuario.setUserName(view.getTxtUserName().getText());
         usuario.setSenha(new String(view.getTxtSenha().getPassword()));
     }
-    
+
     private void salvar() {
-        popularUsuario();
-        dao.save(usuario);
+        try {
+            popularUsuario();
+            dao.save(usuario);
+            JOptionPane.showMessageDialog(null, "Usuario salvo com sucesso!");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(view, "Erro ao salvar a estufa: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
     }
-    
+
 }
