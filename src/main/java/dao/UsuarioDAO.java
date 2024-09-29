@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
+import javax.persistence.NoResultException;
 import util.HibernateUtil;
 
 public class UsuarioDAO {
@@ -63,14 +64,19 @@ public class UsuarioDAO {
         }
     }
 
-    public Usuario findById(Long id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        try {
-            return session.get(Usuario.class, id);
-        } finally {
-            session.close();
-        }
+    public Usuario findByUserName(String username) {
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    try {
+        String jpql = "SELECT u FROM Usuario u WHERE u.userName = :username";
+        return session.createQuery(jpql, Usuario.class)
+                      .setParameter("username", username)
+                      .getSingleResult(); 
+    } catch (NoResultException e) {
+        return null;  
+    } finally {
+        session.close();
     }
+}
 
     public List<Usuario> findAll() {
         Session session = HibernateUtil.getSessionFactory().openSession();

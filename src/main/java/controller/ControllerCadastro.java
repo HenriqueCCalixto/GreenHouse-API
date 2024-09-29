@@ -28,6 +28,7 @@ public class ControllerCadastro {
             Double umidadeMin = Double.parseDouble(cadastroView.getUmidadeMinField().getText());
             Integer lumens = Integer.parseInt(cadastroView.getLumensField().getText());
 
+               
             EstufaEntity estufa = new EstufaEntity();
             estufa.setNomeEstufa(nomeEstufa);
             estufa.setNomePlanta(nomePlanta);
@@ -40,6 +41,7 @@ public class ControllerCadastro {
             estufaDAO.save(estufa);
             JOptionPane.showMessageDialog(null, "Estufa salva com sucesso!");
             clearFields(); 
+            cadastroView.dispose();
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(cadastroView, "Por favor, insira valores válidos para as temperaturas e luminosidade.", "Erro", JOptionPane.ERROR_MESSAGE);
         } catch (Exception e) {
