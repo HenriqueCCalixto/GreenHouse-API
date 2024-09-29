@@ -52,7 +52,7 @@ public class CadastroView extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(900, 500));
         setSize(new java.awt.Dimension(900, 500));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cadastro de Estufa", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 11), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cadastro de Estufa", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 11))); // NOI18N
         jPanel1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         jPanel1.setMaximumSize(new java.awt.Dimension(876, 453));
         jPanel1.setMinimumSize(new java.awt.Dimension(876, 453));
@@ -60,51 +60,51 @@ public class CadastroView extends javax.swing.JFrame {
 
         lblNameEstufa.setText("Nome da Estufa:");
         jPanel1.add(lblNameEstufa);
-        lblNameEstufa.setBounds(17, 48, 92, 16);
+        lblNameEstufa.setBounds(17, 48, 87, 16);
 
         lblNamePlanta.setText("Nome da Planta:");
         jPanel1.add(lblNamePlanta);
-        lblNamePlanta.setBounds(17, 96, 92, 16);
+        lblNamePlanta.setBounds(17, 96, 88, 16);
 
         lblTempMax.setText("Temperatura Máxima:");
         jPanel1.add(lblTempMax);
-        lblTempMax.setBounds(17, 150, 125, 16);
+        lblTempMax.setBounds(17, 150, 116, 16);
 
         lblTempMin.setText("Temperatura Mínima:");
         jPanel1.add(lblTempMin);
-        lblTempMin.setBounds(17, 200, 121, 16);
+        lblTempMin.setBounds(17, 200, 114, 16);
 
         lblUmiMax.setText("Umidade Máxima:");
         jPanel1.add(lblUmiMax);
-        lblUmiMax.setBounds(17, 250, 101, 16);
+        lblUmiMax.setBounds(17, 250, 97, 16);
 
         lblUmiMin.setText("Umidade Mínima:");
         jPanel1.add(lblUmiMin);
-        lblUmiMin.setBounds(17, 297, 97, 16);
+        lblUmiMin.setBounds(17, 297, 95, 16);
 
         lblQtdLumens.setText("Quantidade de Lumens:");
         jPanel1.add(lblQtdLumens);
-        lblQtdLumens.setBounds(17, 345, 134, 16);
+        lblQtdLumens.setBounds(17, 345, 126, 16);
         jPanel1.add(nomeEstufaField);
-        nomeEstufaField.setBounds(120, 47, 140, 20);
+        nomeEstufaField.setBounds(120, 47, 140, 22);
         jPanel1.add(nomePlantaField);
-        nomePlantaField.setBounds(120, 96, 140, 20);
+        nomePlantaField.setBounds(120, 96, 140, 22);
         jPanel1.add(lumensField);
-        lumensField.setBounds(160, 345, 140, 20);
+        lumensField.setBounds(160, 345, 140, 22);
         jPanel1.add(temperaturaMaxField);
-        temperaturaMaxField.setBounds(150, 148, 140, 20);
+        temperaturaMaxField.setBounds(150, 148, 140, 22);
         jPanel1.add(temperaturaMinField);
-        temperaturaMinField.setBounds(150, 199, 140, 20);
+        temperaturaMinField.setBounds(150, 199, 140, 22);
         jPanel1.add(umidadeMaxField);
-        umidadeMaxField.setBounds(130, 248, 140, 20);
+        umidadeMaxField.setBounds(130, 248, 140, 22);
         jPanel1.add(umidadeMinField);
-        umidadeMinField.setBounds(130, 296, 140, 20);
+        umidadeMinField.setBounds(130, 296, 140, 22);
 
         salvarButton.setText("SALVAR");
         salvarButton.setMaximumSize(new java.awt.Dimension(900, 500));
         salvarButton.setMinimumSize(new java.awt.Dimension(900, 500));
         jPanel1.add(salvarButton);
-        salvarButton.setBounds(100, 400, 81, 26);
+        salvarButton.setBounds(100, 400, 72, 22);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,6 +124,7 @@ public class CadastroView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

@@ -1,1 +1,7 @@
 pim\estufapim\Main.class
+util\HibernateUtil.class
+dao\EstufaDAO.class
+view\CadastroView$1.class
+controller\ControllerCadastro.class
+view\CadastroView.class
+model\EstufaEntity.class
