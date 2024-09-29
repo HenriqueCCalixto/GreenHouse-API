@@ -8,7 +8,7 @@
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/estufas</property>
         <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.connection.password">its2004fj5</property>
+        <property name="hibernate.connection.password">1414</property>
 
         <property name="hibernate.hbm2ddl.auto">update</property>
         
@@ -19,5 +19,6 @@
         <property name="hibernate.cache.use_second_level_cache">false</property>
 
         <mapping class="model.EstufaEntity" />
+        <mapping class="model.Usuario" />
     </session-factory>
 </hibernate-configuration>
