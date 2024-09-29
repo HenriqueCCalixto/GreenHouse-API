@@ -40,14 +40,16 @@ public class CadastroLoginUsuarioView extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, -1, -1));
+        getContentPane().add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 250, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 300, -1));
 
         btnEntrar.setText("Entrar");
-        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
+        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, -1));
 
         cadastrarUsuario.setText("Cadastrar usuário");
-        getContentPane().add(cadastrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
+        getContentPane().add(cadastrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/TelaLoginEstufa914.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 914, 514));
 
         pack();
