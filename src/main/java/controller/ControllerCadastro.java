@@ -19,7 +19,7 @@ public class ControllerCadastro {
         this.cadastroView = cadastroView;
         this.estufaDAO = estufaDAO;
 
-        cadastroView.getTemperaturaMaxField().setText(String.valueOf(cadastroView.getSliderTempMaxima().getValue()));
+       
         cadastroView.getSalvarButton().addActionListener(e -> salvarEstufa());
         
         cadastroView.getSliderTempMaxima().addChangeListener(new ChangeListener() {
@@ -28,6 +28,35 @@ public class ControllerCadastro {
                 cadastroView.getTemperaturaMaxField().setText(String.valueOf(cadastroView.getSliderTempMaxima().getValue()));
             }
         });
+        
+         cadastroView.getSliderTempMinima().addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                cadastroView.getTemperaturaMinField().setText(String.valueOf(cadastroView.getSliderTempMinima().getValue()));
+            }
+        });
+        
+        cadastroView.getSliderUmiMaxima().addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                cadastroView.getUmidadeMaxField().setText(String.valueOf(cadastroView.getSliderUmiMaxima().getValue()));
+            }
+        });   
+        
+        cadastroView.getSliderUmiMinima().addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                cadastroView.getUmidadeMinField().setText(String.valueOf(cadastroView.getSliderUmiMinima().getValue()));
+            }
+        }); 
+        
+        cadastroView.getSliderQuantLumens().addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                cadastroView.getLumensField().setText(String.valueOf(cadastroView.getSliderQuantLumens().getValue()));
+            }
+        }); 
+     
     }
 
     private void salvarEstufa() {

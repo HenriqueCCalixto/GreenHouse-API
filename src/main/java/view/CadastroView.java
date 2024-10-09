@@ -46,11 +46,11 @@ public class CadastroView extends javax.swing.JFrame {
         umidadeMaxField = new javax.swing.JTextField();
         umidadeMinField = new javax.swing.JTextField();
         salvarButton = new javax.swing.JButton();
-        jSlider1 = new javax.swing.JSlider();
+        sliderQuantLumens = new javax.swing.JSlider();
         sliderTempMaxima = new javax.swing.JSlider();
-        jSlider3 = new javax.swing.JSlider();
-        jSlider4 = new javax.swing.JSlider();
-        jSlider5 = new javax.swing.JSlider();
+        sliderTempMinima = new javax.swing.JSlider();
+        sliderUmiMaxima = new javax.swing.JSlider();
+        sliderUmiMinima = new javax.swing.JSlider();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Estufas");
@@ -122,16 +122,16 @@ public class CadastroView extends javax.swing.JFrame {
         salvarButton.setMinimumSize(new java.awt.Dimension(900, 500));
         jPanel1.add(salvarButton);
         salvarButton.setBounds(100, 400, 72, 22);
-        jPanel1.add(jSlider1);
-        jSlider1.setBounds(150, 340, 200, 20);
+        jPanel1.add(sliderQuantLumens);
+        sliderQuantLumens.setBounds(150, 340, 200, 20);
         jPanel1.add(sliderTempMaxima);
         sliderTempMaxima.setBounds(150, 150, 200, 20);
-        jPanel1.add(jSlider3);
-        jSlider3.setBounds(580, 150, 200, 20);
-        jPanel1.add(jSlider4);
-        jSlider4.setBounds(150, 250, 200, 20);
-        jPanel1.add(jSlider5);
-        jSlider5.setBounds(580, 260, 200, 20);
+        jPanel1.add(sliderTempMinima);
+        sliderTempMinima.setBounds(580, 150, 200, 20);
+        jPanel1.add(sliderUmiMaxima);
+        sliderUmiMaxima.setBounds(150, 250, 200, 20);
+        jPanel1.add(sliderUmiMinima);
+        sliderUmiMinima.setBounds(580, 260, 200, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,10 +199,6 @@ public class CadastroView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider3;
-    private javax.swing.JSlider jSlider4;
-    private javax.swing.JSlider jSlider5;
     private javax.swing.JLabel lblNameEstufa;
     private javax.swing.JLabel lblNamePlanta;
     private javax.swing.JLabel lblQtdLumens;
@@ -214,7 +210,11 @@ public class CadastroView extends javax.swing.JFrame {
     private javax.swing.JTextField nomeEstufaField;
     private javax.swing.JTextField nomePlantaField;
     private javax.swing.JButton salvarButton;
+    private javax.swing.JSlider sliderQuantLumens;
     private javax.swing.JSlider sliderTempMaxima;
+    private javax.swing.JSlider sliderTempMinima;
+    private javax.swing.JSlider sliderUmiMaxima;
+    private javax.swing.JSlider sliderUmiMinima;
     private javax.swing.JTextField temperaturaMaxField;
     private javax.swing.JTextField temperaturaMinField;
     private javax.swing.JTextField umidadeMaxField;
@@ -291,6 +291,38 @@ public class CadastroView extends javax.swing.JFrame {
 
     public void setSliderTempMaxima(JSlider sliderTempMaxima) {
         this.sliderTempMaxima = sliderTempMaxima;
+    }
+
+    public JSlider getSliderQuantLumens() {
+        return sliderQuantLumens;
+    }
+
+    public void setSliderQuantLumens(JSlider sliderQuantLumens) {
+        this.sliderQuantLumens = sliderQuantLumens;
+    }
+
+    public JSlider getSliderTempMinima() {
+        return sliderTempMinima;
+    }
+
+    public void setSliderTempMinima(JSlider sliderTempMinima) {
+        this.sliderTempMinima = sliderTempMinima;
+    }
+
+    public JSlider getSliderUmiMaxima() {
+        return sliderUmiMaxima;
+    }
+
+    public void setSliderUmiMaxima(JSlider sliderUmiMaxima) {
+        this.sliderUmiMaxima = sliderUmiMaxima;
+    }
+
+    public JSlider getSliderUmiMinima() {
+        return sliderUmiMinima;
+    }
+
+    public void setSliderUmiMinima(JSlider sliderUmiMinima) {
+        this.sliderUmiMinima = sliderUmiMinima;
     }
     
 }

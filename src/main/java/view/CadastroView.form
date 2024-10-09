@@ -213,7 +213,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider1">
+        <Component class="javax.swing.JSlider" name="sliderQuantLumens">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="150" y="340" width="-1" height="-1"/>
@@ -227,21 +227,21 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider3">
+        <Component class="javax.swing.JSlider" name="sliderTempMinima">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="580" y="150" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider4">
+        <Component class="javax.swing.JSlider" name="sliderUmiMaxima">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="150" y="250" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider5">
+        <Component class="javax.swing.JSlider" name="sliderUmiMinima">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="580" y="260" width="-1" height="-1"/>
