@@ -54,10 +54,12 @@ public class CadastroLoginUsuarioView extends javax.swing.JDialog {
 
         btnEntrar.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         btnEntrar.setText("Login");
+        btnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 100, 30));
 
         cadastrarUsuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cadastrarUsuario.setText("Cadastrar usuário");
+        cadastrarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(cadastrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 400, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TelaLoginEstufa914.png"))); // NOI18N

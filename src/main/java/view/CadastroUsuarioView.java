@@ -38,6 +38,7 @@ public class CadastroUsuarioView extends javax.swing.JDialog {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(914, 514));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtNome.setBackground(new java.awt.Color(204, 204, 204));
@@ -51,6 +52,7 @@ public class CadastroUsuarioView extends javax.swing.JDialog {
 
         btnSalvar.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         btnSalvar.setText("Salvar");
+        btnSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarActionPerformed(evt);
