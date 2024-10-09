@@ -4,6 +4,10 @@ import dao.EstufaDAO;
 import javax.swing.JOptionPane;
 import model.EstufaEntity;
 import view.CadastroView;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class ControllerCadastro {
 
@@ -15,7 +19,15 @@ public class ControllerCadastro {
         this.cadastroView = cadastroView;
         this.estufaDAO = estufaDAO;
 
+        cadastroView.getTemperaturaMaxField().setText(String.valueOf(cadastroView.getSliderTempMaxima().getValue()));
         cadastroView.getSalvarButton().addActionListener(e -> salvarEstufa());
+        
+        cadastroView.getSliderTempMaxima().addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                cadastroView.getTemperaturaMaxField().setText(String.valueOf(cadastroView.getSliderTempMaxima().getValue()));
+            }
+        });
     }
 
     private void salvarEstufa() {

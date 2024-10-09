@@ -5,6 +5,7 @@
 package view;
 
 import javax.swing.JButton;
+import javax.swing.JSlider;
 import javax.swing.JTextField;
 
 /**
@@ -45,10 +46,14 @@ public class CadastroView extends javax.swing.JFrame {
         umidadeMaxField = new javax.swing.JTextField();
         umidadeMinField = new javax.swing.JTextField();
         salvarButton = new javax.swing.JButton();
+        jSlider1 = new javax.swing.JSlider();
+        sliderTempMaxima = new javax.swing.JSlider();
+        jSlider3 = new javax.swing.JSlider();
+        jSlider4 = new javax.swing.JSlider();
+        jSlider5 = new javax.swing.JSlider();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Estufas");
-        setMaximumSize(new java.awt.Dimension(900, 500));
         setMinimumSize(new java.awt.Dimension(900, 500));
         setSize(new java.awt.Dimension(900, 500));
 
@@ -64,7 +69,7 @@ public class CadastroView extends javax.swing.JFrame {
 
         lblNamePlanta.setText("Nome da Planta:");
         jPanel1.add(lblNamePlanta);
-        lblNamePlanta.setBounds(17, 96, 88, 16);
+        lblNamePlanta.setBounds(340, 50, 88, 16);
 
         lblTempMax.setText("Temperatura Máxima:");
         jPanel1.add(lblTempMax);
@@ -72,7 +77,7 @@ public class CadastroView extends javax.swing.JFrame {
 
         lblTempMin.setText("Temperatura Mínima:");
         jPanel1.add(lblTempMin);
-        lblTempMin.setBounds(17, 200, 114, 16);
+        lblTempMin.setBounds(450, 150, 114, 16);
 
         lblUmiMax.setText("Umidade Máxima:");
         jPanel1.add(lblUmiMax);
@@ -80,31 +85,53 @@ public class CadastroView extends javax.swing.JFrame {
 
         lblUmiMin.setText("Umidade Mínima:");
         jPanel1.add(lblUmiMin);
-        lblUmiMin.setBounds(17, 297, 95, 16);
+        lblUmiMin.setBounds(440, 260, 95, 16);
 
         lblQtdLumens.setText("Quantidade de Lumens:");
         jPanel1.add(lblQtdLumens);
         lblQtdLumens.setBounds(17, 345, 126, 16);
         jPanel1.add(nomeEstufaField);
         nomeEstufaField.setBounds(120, 47, 140, 22);
+
+        nomePlantaField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomePlantaFieldActionPerformed(evt);
+            }
+        });
         jPanel1.add(nomePlantaField);
-        nomePlantaField.setBounds(120, 96, 140, 22);
+        nomePlantaField.setBounds(440, 47, 140, 22);
+
+        lumensField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lumensFieldActionPerformed(evt);
+            }
+        });
         jPanel1.add(lumensField);
-        lumensField.setBounds(160, 345, 140, 22);
+        lumensField.setBounds(370, 340, 30, 22);
         jPanel1.add(temperaturaMaxField);
-        temperaturaMaxField.setBounds(150, 148, 140, 22);
+        temperaturaMaxField.setBounds(370, 150, 30, 22);
         jPanel1.add(temperaturaMinField);
-        temperaturaMinField.setBounds(150, 199, 140, 22);
+        temperaturaMinField.setBounds(800, 150, 30, 22);
         jPanel1.add(umidadeMaxField);
-        umidadeMaxField.setBounds(130, 248, 140, 22);
+        umidadeMaxField.setBounds(370, 250, 30, 22);
         jPanel1.add(umidadeMinField);
-        umidadeMinField.setBounds(130, 296, 140, 22);
+        umidadeMinField.setBounds(800, 260, 30, 22);
 
         salvarButton.setText("SALVAR");
         salvarButton.setMaximumSize(new java.awt.Dimension(900, 500));
         salvarButton.setMinimumSize(new java.awt.Dimension(900, 500));
         jPanel1.add(salvarButton);
         salvarButton.setBounds(100, 400, 72, 22);
+        jPanel1.add(jSlider1);
+        jSlider1.setBounds(150, 340, 200, 20);
+        jPanel1.add(sliderTempMaxima);
+        sliderTempMaxima.setBounds(150, 150, 200, 20);
+        jPanel1.add(jSlider3);
+        jSlider3.setBounds(580, 150, 200, 20);
+        jPanel1.add(jSlider4);
+        jSlider4.setBounds(150, 250, 200, 20);
+        jPanel1.add(jSlider5);
+        jSlider5.setBounds(580, 260, 200, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,20 +139,28 @@ public class CadastroView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 876, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(26, 26, 26)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(15, 15, 15))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lumensFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lumensFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lumensFieldActionPerformed
+
+    private void nomePlantaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomePlantaFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomePlantaFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,6 +199,10 @@ public class CadastroView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSlider jSlider1;
+    private javax.swing.JSlider jSlider3;
+    private javax.swing.JSlider jSlider4;
+    private javax.swing.JSlider jSlider5;
     private javax.swing.JLabel lblNameEstufa;
     private javax.swing.JLabel lblNamePlanta;
     private javax.swing.JLabel lblQtdLumens;
@@ -175,6 +214,7 @@ public class CadastroView extends javax.swing.JFrame {
     private javax.swing.JTextField nomeEstufaField;
     private javax.swing.JTextField nomePlantaField;
     private javax.swing.JButton salvarButton;
+    private javax.swing.JSlider sliderTempMaxima;
     private javax.swing.JTextField temperaturaMaxField;
     private javax.swing.JTextField temperaturaMinField;
     private javax.swing.JTextField umidadeMaxField;
@@ -245,6 +285,12 @@ public class CadastroView extends javax.swing.JFrame {
         this.salvarButton = salvarButton;
     }
 
-    
+    public JSlider getSliderTempMaxima() {
+        return sliderTempMaxima;
+    }
+
+    public void setSliderTempMaxima(JSlider sliderTempMaxima) {
+        this.sliderTempMaxima = sliderTempMaxima;
+    }
     
 }
