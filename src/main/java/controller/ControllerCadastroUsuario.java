@@ -4,6 +4,7 @@ import dao.UsuarioDAO;
 import javax.swing.JOptionPane;
 import model.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
+import pim.estufapim.Main;
 import view.CadastroUsuarioView;
 
 public class ControllerCadastroUsuario {
@@ -14,6 +15,7 @@ public class ControllerCadastroUsuario {
 
     public ControllerCadastroUsuario(CadastroUsuarioView view) {
         this.view = view;
+        Main.flat();
         addEvents();
         this.view.setVisible(true);
     }
