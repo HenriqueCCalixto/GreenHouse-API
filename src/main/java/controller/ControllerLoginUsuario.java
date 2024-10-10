@@ -7,6 +7,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JOptionPane;
 import model.Usuario;
 import org.mindrot.jbcrypt.BCrypt;
+import pim.estufapim.Main;
 import view.CadastroLoginUsuarioView;
 import view.CadastroUsuarioView;
 import view.CadastroView;
@@ -19,6 +20,7 @@ public class ControllerLoginUsuario {
 
     public ControllerLoginUsuario(CadastroLoginUsuarioView view) {
         this.view = view;
+        Main.flatInte();
         addEvents();
         this.view.setVisible(true);
     }

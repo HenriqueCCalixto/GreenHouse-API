@@ -115,12 +115,12 @@ public class CadastroView extends javax.swing.JFrame {
         lblNameEstufa.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblNameEstufa.setForeground(new java.awt.Color(255, 255, 255));
         lblNameEstufa.setText("Nome da Estufa:");
-        getContentPane().add(lblNameEstufa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        getContentPane().add(lblNameEstufa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 114, -1, -1));
 
         lblNamePlanta.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblNamePlanta.setForeground(new java.awt.Color(255, 255, 255));
         lblNamePlanta.setText("Nome da Planta:");
-        getContentPane().add(lblNamePlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
+        getContentPane().add(lblNamePlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 114, -1, -1));
 
         umidadeMaxField.setBackground(new java.awt.Color(204, 204, 204));
         getContentPane().add(umidadeMaxField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 40, -1));
