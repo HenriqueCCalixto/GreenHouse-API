@@ -56,20 +56,19 @@ public class CadastroView extends javax.swing.JFrame {
         setTitle("Cadastro de Estufas");
         setMaximumSize(new java.awt.Dimension(914, 514));
         setMinimumSize(new java.awt.Dimension(914, 514));
-        setPreferredSize(new java.awt.Dimension(914, 514));
         setSize(new java.awt.Dimension(914, 514));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sliderUmiMinima.setForeground(new java.awt.Color(94, 219, 18));
-        getContentPane().add(sliderUmiMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
+        getContentPane().add(sliderUmiMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, -1, -1));
 
         lblTempMax.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblTempMax.setForeground(new java.awt.Color(255, 255, 255));
         lblTempMax.setText("Temperatura Máxima:");
-        getContentPane().add(lblTempMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        getContentPane().add(lblTempMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
         sliderQuantLumens.setForeground(new java.awt.Color(94, 219, 18));
-        getContentPane().add(sliderQuantLumens, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
+        getContentPane().add(sliderQuantLumens, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
 
         nomeEstufaField.setBackground(new java.awt.Color(204, 204, 204));
         nomeEstufaField.addActionListener(new java.awt.event.ActionListener() {
@@ -77,15 +76,15 @@ public class CadastroView extends javax.swing.JFrame {
                 nomeEstufaFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeEstufaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 250, -1));
+        getContentPane().add(nomeEstufaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 250, -1));
 
         lblUmiMax.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblUmiMax.setForeground(new java.awt.Color(255, 255, 255));
         lblUmiMax.setText("Umidade Máxima:");
-        getContentPane().add(lblUmiMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        getContentPane().add(lblUmiMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         nomePlantaField.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(nomePlantaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 97, 250, -1));
+        getContentPane().add(nomePlantaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 250, -1));
 
         lumensField.setBackground(new java.awt.Color(204, 204, 204));
         lumensField.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +92,7 @@ public class CadastroView extends javax.swing.JFrame {
                 lumensFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(lumensField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 360, 40, -1));
+        getContentPane().add(lumensField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 40, -1));
 
         salvarButton.setBackground(new java.awt.Color(94, 219, 18));
         salvarButton.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -106,53 +105,53 @@ public class CadastroView extends javax.swing.JFrame {
                 salvarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(salvarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 90, 30));
+        getContentPane().add(salvarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 90, 30));
 
         lblQtdLumens.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblQtdLumens.setForeground(new java.awt.Color(255, 255, 255));
         lblQtdLumens.setText("Quantidade Lumens:");
-        getContentPane().add(lblQtdLumens, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        getContentPane().add(lblQtdLumens, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
 
         lblNameEstufa.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblNameEstufa.setForeground(new java.awt.Color(255, 255, 255));
         lblNameEstufa.setText("Nome da Estufa:");
-        getContentPane().add(lblNameEstufa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+        getContentPane().add(lblNameEstufa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
         lblNamePlanta.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblNamePlanta.setForeground(new java.awt.Color(255, 255, 255));
         lblNamePlanta.setText("Nome da Planta:");
-        getContentPane().add(lblNamePlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
+        getContentPane().add(lblNamePlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
 
         umidadeMaxField.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(umidadeMaxField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 40, -1));
+        getContentPane().add(umidadeMaxField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 40, -1));
 
         umidadeMinField.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(umidadeMinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 270, 40, -1));
+        getContentPane().add(umidadeMinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 280, 40, -1));
 
         sliderTempMinima.setForeground(new java.awt.Color(94, 219, 18));
-        getContentPane().add(sliderTempMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, -1, -1));
+        getContentPane().add(sliderTempMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, -1, -1));
 
         temperaturaMinField.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(temperaturaMinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 180, 40, -1));
+        getContentPane().add(temperaturaMinField, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 190, 40, -1));
 
         lblUmiMin.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblUmiMin.setForeground(new java.awt.Color(255, 255, 255));
         lblUmiMin.setText("Umidade Mínima:");
-        getContentPane().add(lblUmiMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, -1));
+        getContentPane().add(lblUmiMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, -1, -1));
 
         temperaturaMaxField.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(temperaturaMaxField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 40, -1));
+        getContentPane().add(temperaturaMaxField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 40, -1));
 
         sliderTempMaxima.setForeground(new java.awt.Color(94, 219, 18));
-        getContentPane().add(sliderTempMaxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
+        getContentPane().add(sliderTempMaxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
 
         lblTempMin.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblTempMin.setForeground(new java.awt.Color(255, 255, 255));
         lblTempMin.setText("Temperatura Mínima:");
-        getContentPane().add(lblTempMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
+        getContentPane().add(lblTempMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, -1));
 
         sliderUmiMaxima.setForeground(new java.awt.Color(94, 219, 18));
-        getContentPane().add(sliderUmiMaxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, -1, -1));
+        getContentPane().add(sliderUmiMaxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/telaCadastroEstufa.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 914, 514));

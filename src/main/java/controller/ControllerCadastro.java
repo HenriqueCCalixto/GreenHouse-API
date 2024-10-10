@@ -57,6 +57,7 @@ public class ControllerCadastro {
             }
         }); 
      
+        bloquearDigitacaoFields();
     }
 
     private void salvarEstufa() {
@@ -98,5 +99,13 @@ public class ControllerCadastro {
         cadastroView.getUmidadeMaxField().setText("");
         cadastroView.getUmidadeMinField().setText("");
         cadastroView.getLumensField().setText("");
+    }
+    
+    private void bloquearDigitacaoFields(){
+        cadastroView.getTemperaturaMaxField().setEditable(false);
+        cadastroView.getTemperaturaMinField().setEditable(false);
+        cadastroView.getUmidadeMaxField().setEditable(false);
+        cadastroView.getUmidadeMinField().setEditable(false);
+        cadastroView.getLumensField().setEditable(false);
     }
 }
