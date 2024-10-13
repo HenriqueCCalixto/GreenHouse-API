@@ -3,7 +3,6 @@ package pim.estufapim;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import dao.EstufaDAO;
-import view.CadastroView;
 import controller.ControllerCadastro;
 import controller.ControllerCadastroUsuario;
 import controller.ControllerLoginUsuario;

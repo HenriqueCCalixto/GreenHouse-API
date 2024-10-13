@@ -28,6 +28,11 @@ public class TableEstufaModel extends AbstractTableModel {
     }
 
     @Override
+    public String getColumnName(int column) {
+        return colunas[column];
+    }
+
+    @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         EstufaEntity estufa = tabela.get(rowIndex);
         switch (columnIndex) {

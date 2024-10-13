@@ -4,6 +4,9 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JTable;
+
 /**
  *
  * @author Usuario
@@ -28,13 +31,15 @@ public class ConsultaEstufaView extends javax.swing.JDialog {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbEstufas = new javax.swing.JTable();
+        btnExcluir = new javax.swing.JButton();
+        btnNovo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbEstufas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -45,12 +50,19 @@ public class ConsultaEstufaView extends javax.swing.JDialog {
                 "Estufas"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbEstufas);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 560, 280));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 890, 230));
+
+        btnExcluir.setText("excluir");
+        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 200, 445, 50));
+
+        btnNovo.setText("novo");
+        getContentPane().add(btnNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 445, 50));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 915, 515));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -96,8 +108,35 @@ public class ConsultaEstufaView extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnExcluir;
+    private javax.swing.JButton btnNovo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tbEstufas;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getTbEstufas() {
+        return tbEstufas;
+    }
+
+    public void setTbEstufas(JTable tbEstufas) {
+        this.tbEstufas = tbEstufas;
+    }
+
+    public JButton getBtnExcluir() {
+        return btnExcluir;
+    }
+
+    public void setBtnExcluir(JButton btnExcluir) {
+        this.btnExcluir = btnExcluir;
+    }
+
+    public JButton getBtnNovo() {
+        return btnNovo;
+    }
+
+    public void setBtnNovo(JButton btnNovo) {
+        this.btnNovo = btnNovo;
+    }
+    
 }
