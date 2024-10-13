@@ -5,6 +5,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import model.EstufaEntity;
 import model.TableEstufaModel;
 import model.Usuario;
@@ -17,6 +18,7 @@ public class ControllerHome {
     private EstufaDAO estufaImple = new EstufaDAO();
     private List<EstufaEntity> lista = estufaImple.findAll();
     private Usuario usuario;
+    private EstufaEntity estufa = new EstufaEntity();
 
     public ControllerHome(ConsultaEstufaView view, Usuario usuario) {
         this.view = view;
@@ -48,12 +50,23 @@ public class ControllerHome {
                     int row = view.getTbEstufas().getSelectedRow();
                     if (row != -1) {
                         EstufaEntity estufa = lista.get(row);
-                        ControllerCadastro controllerCadastro = new ControllerCadastro(new CadastroEstufaView(null, true),estufa);
+                        ControllerCadastro controllerCadastro = new ControllerCadastro(new CadastroEstufaView(null, true), estufa);
                         popularTb();
                     }
                 }
             }
         });
+
+        view.getTbEstufas().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (SwingUtilities.isRightMouseButton(e)) {
+                    int row = view.getTbEstufas().getSelectedRow();
+                    definirEstufaArduino(row);
+                }
+            }
+        });
+
     }
 
     private void popularTb() {
@@ -79,6 +92,24 @@ public class ControllerHome {
     private void adicionarEstufa() {
         ControllerCadastro controllerCadastro = new ControllerCadastro(new CadastroEstufaView(null, true));
         popularTb();
+    }
+
+    private void definirEstufaArduino(int row) {
+        if (row >= 0 && row < lista.size()) {
+            int resposta = JOptionPane.showConfirmDialog(
+                    null,
+                    "Deseja definir a estufa?",
+                    "Confirmação",
+                    JOptionPane.YES_NO_OPTION
+            );
+
+            if (resposta == JOptionPane.YES_OPTION) {
+                estufa = lista.get(row);
+                JOptionPane.showMessageDialog(null, "Estufa definida com sucesso!");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Linha inválida!");
+        }
     }
 
 }
