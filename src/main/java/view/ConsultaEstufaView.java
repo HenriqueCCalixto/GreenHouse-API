@@ -5,6 +5,7 @@
 package view;
 
 import javax.swing.JButton;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 /**
@@ -30,7 +31,7 @@ public class ConsultaEstufaView extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jsPaneTabelaEstufa = new javax.swing.JScrollPane();
         tbEstufas = new javax.swing.JTable();
         btnExcluir = new javax.swing.JButton();
         btnNovo = new javax.swing.JButton();
@@ -50,20 +51,32 @@ public class ConsultaEstufaView extends javax.swing.JDialog {
                 "Estufas"
             }
         ));
-        jScrollPane1.setViewportView(tbEstufas);
+        jsPaneTabelaEstufa.setViewportView(tbEstufas);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 890, 230));
+        getContentPane().add(jsPaneTabelaEstufa, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 630, 230));
 
-        btnExcluir.setText("excluir");
-        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 200, 445, 50));
+        btnExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/excluir estufa.png"))); // NOI18N
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 180, 315, 50));
 
-        btnNovo.setText("novo");
-        getContentPane().add(btnNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 445, 50));
+        btnNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Adicionar estufa (1).png"))); // NOI18N
+        getContentPane().add(btnNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 180, 315, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TelaConsulta.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 915, 515));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,7 +124,7 @@ public class ConsultaEstufaView extends javax.swing.JDialog {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnNovo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jsPaneTabelaEstufa;
     private javax.swing.JTable tbEstufas;
     // End of variables declaration//GEN-END:variables
 
@@ -137,6 +150,14 @@ public class ConsultaEstufaView extends javax.swing.JDialog {
 
     public void setBtnNovo(JButton btnNovo) {
         this.btnNovo = btnNovo;
+    }
+
+    public JScrollPane getJsPaneTabelaEstufa() {
+        return jsPaneTabelaEstufa;
+    }
+
+    public void setJsPaneTabelaEstufa(JScrollPane jsPaneTabelaEstufa) {
+        this.jsPaneTabelaEstufa = jsPaneTabelaEstufa;
     }
     
 }

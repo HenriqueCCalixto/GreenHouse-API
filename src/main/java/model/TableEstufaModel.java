@@ -40,7 +40,7 @@ public class TableEstufaModel extends AbstractTableModel {
             case 0:
                 return estufa.getNomeEstufa();
             case 1:
-                return estufa.getNomeEstufa();
+                return estufa.getNomePlanta();
             case 2:
                 return estufa.getTemperaturaMax();
             case 3:

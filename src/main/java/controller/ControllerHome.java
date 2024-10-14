@@ -1,13 +1,22 @@
 package controller;
 
+import controller.ControllerCadastro;
 import dao.EstufaDAO;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.SwingUtilities;
+import javax.swing.table.TableCellRenderer;
 import model.EstufaEntity;
+import model.EstufaEntity;
+import model.EstufaTableRenderer;
 import model.TableEstufaModel;
+import model.TableEstufaModel;
+import model.Usuario;
 import model.Usuario;
 import view.CadastroEstufaView;
 import view.ConsultaEstufaView;
@@ -71,7 +80,33 @@ public class ControllerHome {
 
     private void popularTb() {
         lista = estufaImple.findAll();
-        view.getTbEstufas().setModel(new TableEstufaModel(lista));
+        TableEstufaModel model = new TableEstufaModel(lista);
+        view.getTbEstufas().setModel(model);
+        view.getTbEstufas().setFont(new Font("Arial", Font.PLAIN, 16));
+        view.getTbEstufas().setRowHeight(50);
+
+        view.getJsPaneTabelaEstufa().setBackground(Color.decode("#205a42"));
+        view.getJsPaneTabelaEstufa().setOpaque(true);
+        view.getJsPaneTabelaEstufa().getViewport().setOpaque(false);
+
+        view.getTbEstufas().setShowGrid(true);
+        view.getTbEstufas().setGridColor(Color.decode("#5edb12"));
+        view.getTbEstufas().setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
+        for (int i = 0; i < view.getTbEstufas().getColumnCount(); i++) {
+            view.getTbEstufas().getColumnModel().getColumn(i).setPreferredWidth(180);
+            view.getTbEstufas().getColumnModel().getColumn(i).setCellRenderer(new EstufaTableRenderer());
+        }
+
+        EstufaTableRenderer renderer = new EstufaTableRenderer();
+        for (int i = 0; i < view.getTbEstufas().getColumnCount(); i++) {
+            view.getTbEstufas().getColumnModel().getColumn(i).setCellRenderer(renderer);
+        }
+
+        for (int i = 0; i < view.getTbEstufas().getColumnCount(); i++) {
+            view.getTbEstufas().getTableHeader().getColumnModel().getColumn(i)
+                    .setHeaderRenderer((TableCellRenderer) renderer.getHeaderRendererComponent(view.getTbEstufas()));
+        }
     }
 
     private void excluirEstufa() {
