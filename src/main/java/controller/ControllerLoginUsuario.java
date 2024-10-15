@@ -65,6 +65,7 @@ public class ControllerLoginUsuario {
     }
 
     private void cadastrarUsuario() {
+        Main.flat();
         ControllerCadastroUsuario usuario = new ControllerCadastroUsuario(new CadastroUsuarioView(null, true));
     }
 
