@@ -15,22 +15,19 @@ import view.SplashScreen;
 public class Main {
 
     public static void main(String[] args) {
-        // Exibe a splash screen
+
         SplashScreen splash = new SplashScreen();
         splash.showSplash();
 
-        // Simula o tempo de inicialização (substitua com sua lógica de inicialização)
         try {
-            Thread.sleep(3000);  // Simulando uma carga de 3 segundos
+            Thread.sleep(4500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        // Inicializa a interface gráfica
         flat();
         ControllerLoginUsuario usuario = new ControllerLoginUsuario(new CadastroLoginUsuarioView(null, true));
 
-        // Fecha a splash screen após a inicialização
         splash.hideSplash();
     }
 
