@@ -10,7 +10,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import pim.estufapim.Main;
 import view.CadastroLoginUsuarioView;
 import view.CadastroUsuarioView;
-import view.CadastroView;
+import view.ConsultaEstufaView;
 
 public class ControllerLoginUsuario {
 
@@ -59,10 +59,7 @@ public class ControllerLoginUsuario {
     private void entrar() {
         if (verificarLogin()) {
             view.dispose();
-            CadastroView cadastroView = new CadastroView();
-            EstufaDAO estufaDAO = new EstufaDAO();
-            ControllerCadastro controllerCadastro = new ControllerCadastro(cadastroView, estufaDAO);
-            cadastroView.setVisible(true);
+            ControllerHome home = new ControllerHome(new ConsultaEstufaView(null, true),usuario);
         }
 
     }
