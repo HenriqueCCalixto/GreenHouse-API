@@ -139,7 +139,16 @@ public class ControllerHome {
             );
 
             if (resposta == JOptionPane.YES_OPTION) {
+                EstufaEntity estufaAntiga = estufaImple.findSelectedEstufa();
+                if (estufaAntiga != null) {
+                    estufaAntiga.setEstufaSelecionada(false);
+                    estufaImple.update(estufaAntiga);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Nenhuma estufa anterior selecionada.");
+                }
                 estufa = lista.get(row);
+                estufa.setEstufaSelecionada(true);
+                estufaImple.update(estufa);
                 JOptionPane.showMessageDialog(null, "Estufa definida com sucesso!");
             }
         } else {

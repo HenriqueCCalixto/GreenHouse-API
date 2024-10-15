@@ -36,6 +36,9 @@ public class EstufaEntity {
     
     @Column(name = "quantidade_lumens")
     private Integer quantidadeLumens;
+    
+    @Column(name = "estufa_selecionada")
+    private boolean estufaSelecionada = false;
 
     public Long getId() {
         return id;
@@ -99,6 +102,14 @@ public class EstufaEntity {
 
     public void setQuantidadeLumens(Integer quantidadeLumens) {
         this.quantidadeLumens = quantidadeLumens;
+    }
+
+    public boolean isEstufaSelecionada() {
+        return estufaSelecionada;
+    }
+
+    public void setEstufaSelecionada(boolean estufaSelecionada) {
+        this.estufaSelecionada = estufaSelecionada;
     }
     
 }

@@ -8,7 +8,6 @@ import java.util.List;
 import util.HibernateUtil;
 
 public class EstufaDAO {
-    
 
     public void save(EstufaEntity estufa) {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -34,7 +33,7 @@ public class EstufaDAO {
 
         try {
             transaction = session.beginTransaction();
-            session.update(estufa); 
+            session.update(estufa);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -52,7 +51,7 @@ public class EstufaDAO {
 
         try {
             transaction = session.beginTransaction();
-            session.delete(estufa);  
+            session.delete(estufa);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -67,7 +66,7 @@ public class EstufaDAO {
     public EstufaEntity findById(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
-            return session.get(EstufaEntity.class, id);  
+            return session.get(EstufaEntity.class, id);
         } finally {
             session.close();
         }
@@ -77,6 +76,16 @@ public class EstufaDAO {
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             return session.createQuery("from EstufaEntity", EstufaEntity.class).list();
+        } finally {
+            session.close();
+        }
+    }
+
+    public EstufaEntity findSelectedEstufa() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            return session.createQuery("FROM EstufaEntity e WHERE e.estufaSelecionada = true", EstufaEntity.class)
+                    .uniqueResult();
         } finally {
             session.close();
         }
